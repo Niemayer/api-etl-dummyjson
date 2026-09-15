@@ -14,7 +14,7 @@ lista = []
 lista_filtro = []
 
 try:
-    with open("C:/Users/Niemayer/Documents/project/produtos.json", "w") as produtos:
+    with open("D:/05_ESTUDOS/04_ENGENHARIA DE DADOS/00_PYTHON/project/produtos.json", "w") as produtos:
         while to_valid:
             params = {
                 "limit": limit,
@@ -41,7 +41,7 @@ try:
                 to_valid = False
         json.dump(lista, produtos)
 
-    with open("C:/Users/Niemayer/Documents/project/produtos_filtrados.json", "w") as produtos_filtrados:
+    with open("D:/05_ESTUDOS/04_ENGENHARIA DE DADOS/00_PYTHON/project/produtos_filtrados.json", "w") as produtos_filtrados:
         json.dump(lista_filtro, produtos_filtrados)
 
 except requests.exceptions.ConnectionError:
